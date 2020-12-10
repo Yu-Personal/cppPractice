@@ -1,5 +1,0 @@
-﻿  CppPrimerPractice.cpp
-E:\workspace Cpp\cppPractice\CppBook_Practice\CppPrimer_FifthEdition\CppPrimerPractice.cpp(1,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-E:\workspace Cpp\cppPractice\CppBook_Practice\CppPrimer_FifthEdition\CppPrimerPractice.cpp(3,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-E:\workspace Cpp\cppPractice\CppBook_Practice\CppPrimer_FifthEdition\CppPrimerPractice.cpp(4,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  cracking coding.vcxproj -> E:\workspace Cpp\cppPractice\CppBook_Practice\CppPrimer_FifthEdition\x64\Debug\cracking coding.exe
