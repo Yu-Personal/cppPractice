@@ -1,7 +1,7 @@
-#include<iostream>;
-using namespace std;
-#include<vector>;
-#include<string>;
+//#include<iostream>;
+//using namespace std;
+//#include<vector>;
+//#include<string>;
 
 //c++ Primer 3.2
 //std::string line;
@@ -41,15 +41,15 @@ using namespace std;
 //}
 int main() {
 
-	string word;
-	string phrase;
-	string spacePhrase;
-	while (std::cin >> word) {
-		phrase += word;
-		spacePhrase += word + " ";
-	}
-	std::cout << phrase << std::endl;
-	std::cout << spacePhrase << std::endl;
+	//string word;
+	//string phrase;
+	//string spacePhrase;
+	//while (std::cin >> word) {
+	//	phrase += word;
+	//	spacePhrase += word + " ";
+	//}
+	//std::cout << phrase << std::endl;
+	//std::cout << spacePhrase << std::endl;
 
 	return 0;
 }
