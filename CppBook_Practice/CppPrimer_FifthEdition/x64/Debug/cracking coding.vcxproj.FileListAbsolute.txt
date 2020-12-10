@@ -1,0 +1,2 @@
+E:\workspace Cpp\cppPractice\CppBook_Practice\CppPrimer_FifthEdition\x64\Debug\cracking coding.exe
+E:\workspace Cpp\cppPractice\CppBook_Practice\CppPrimer_FifthEdition\x64\Debug\cracking coding.pdb
