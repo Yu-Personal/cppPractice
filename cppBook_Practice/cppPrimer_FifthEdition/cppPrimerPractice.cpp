@@ -2,7 +2,7 @@
 using namespace std;
 //#include<vector>;
 #include<string>;
-
+string s;
 
 //c++ Primer 3.2
 //std::string line;
@@ -90,11 +90,21 @@ for (int i = 0; i < word.size(); i++) {
 
 }
 cout << "tranditional for: " << word << endl;
-*/
+
 
 string s;
-cout << s[0] << s << "haha"<< endl;
+cout << s[0] << "s is:" << s << ";haha"<< endl; //doesn't give error but s will not cout anything
+cout << s[1] << "s1 is:" << s << ";haha"<< endl; //
 
+*/
+string phrase, newPhrase;
+int i=0;
+cin >> phrase;
+for (int n=0; n < phrase.size(); n++){
+	if (!ispunct(phrase[n])) newPhrase += phrase[n];
+	cout << n << endl;
+}
+	cout << phrase << ":is the old phrase" << endl << newPhrase << ": is the new phrase" <<endl;
 	return 0;
 
 }
