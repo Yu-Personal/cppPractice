@@ -68,7 +68,7 @@ for (char &c : word){
 	c = 'X';
 }
 cout << word << endl;
-*/
+
 //E3.8
 //while loop
 string word, temp;
@@ -90,6 +90,11 @@ for (int i = 0; i < word.size(); i++) {
 
 }
 cout << "tranditional for: " << word << endl;
+*/
+
+string s;
+cout << s[0] << s << "haha"<< endl;
+
 	return 0;
 
 }
