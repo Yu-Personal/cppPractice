@@ -99,9 +99,13 @@ cout << s[1] << "s1 is:" << s << ";haha"<< endl; //
 */
 string phrase, newPhrase;
 int i=0;
-cin >> phrase;
+getline(cin, phrase);
 for (int n=0; n < phrase.size(); n++){
-	if (!ispunct(phrase[n])) newPhrase += phrase[n];
+	//if (!ispunct(phrase[n])) newPhrase += phrase[n];
+	if (ispunct(phrase[n])) {
+		phrase.erase(phrase.begin()+n);
+		n--;
+	}
 	cout << n << endl;
 }
 	cout << phrase << ":is the old phrase" << endl << newPhrase << ": is the new phrase" <<endl;
