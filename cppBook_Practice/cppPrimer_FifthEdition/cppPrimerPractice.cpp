@@ -69,7 +69,23 @@ for (char &c : word){
 }
 cout << word << endl;
 */
+//E3.8
+//while loop
+string word, temp;
+cin >> word;
+temp = word;
+while (int n < word.size()) {
+	word[n] = 'X';
+	n++;
+}
+cout << "while: " << word << endl;
 
+//tranditional for loop
+word = temp;
+for (int n = 0; n==word.size(); n++) {
+	word[n] = 'X';
+}
+cout << "tranditional for: " << word << endl;
 	return 0;
 
 }
