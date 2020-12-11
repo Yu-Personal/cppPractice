@@ -74,16 +74,20 @@ cout << word << endl;
 string word, temp;
 cin >> word;
 temp = word;
-while (int n < word.size()) {
+int n=0;
+while (n < word.size()) {
 	word[n] = 'X';
 	n++;
+	cout << n <<endl;
 }
 cout << "while: " << word << endl;
 
 //tranditional for loop
 word = temp;
-for (int n = 0; n==word.size(); n++) {
-	word[n] = 'X';
+for (int i = 0; i < word.size(); i++) {
+	word[i] = 'X';
+	cout << i << endl;
+
 }
 cout << "tranditional for: " << word << endl;
 	return 0;
