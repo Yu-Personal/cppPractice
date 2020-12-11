@@ -96,7 +96,9 @@ string s;
 cout << s[0] << "s is:" << s << ";haha"<< endl; //doesn't give error but s will not cout anything
 cout << s[1] << "s1 is:" << s << ";haha"<< endl; //
 
-*/
+
+//E3.9 It is invalid because of undefined behavior but it won't give an error if you run it . s is not initiated.
+
 //E3.10
 string phrase, newPhrase;
 int i=0;
@@ -110,6 +112,11 @@ for (int n=0; n < phrase.size(); n++){
 	cout << n << endl;
 }
 	cout << phrase << ":is phrase" << endl << newPhrase << ": is newphrase" <<endl;
+	*/
+
+
+
+
 	return 0;
 
 }
