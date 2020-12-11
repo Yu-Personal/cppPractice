@@ -97,15 +97,16 @@ cout << s[0] << "s is:" << s << ";haha"<< endl; //doesn't give error but s will 
 cout << s[1] << "s1 is:" << s << ";haha"<< endl; //
 
 */
+//E3.10
 string phrase, newPhrase;
 int i=0;
 getline(cin, phrase);
 for (int n=0; n < phrase.size(); n++){
-	//if (!ispunct(phrase[n])) newPhrase += phrase[n];
+	//if (!ispunct(phrase[n])) newPhrase += phrase[n]; //Method 1
 	if (ispunct(phrase[n])) {
 		phrase.erase(phrase.begin()+n);
 		n--;
-	}
+	} //Method 2
 	cout << n << endl;
 }
 	cout << phrase << ":is the old phrase" << endl << newPhrase << ": is the new phrase" <<endl;
