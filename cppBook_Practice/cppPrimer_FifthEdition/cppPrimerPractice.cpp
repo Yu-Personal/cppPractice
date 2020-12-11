@@ -1,7 +1,8 @@
-//#include<iostream>;
-//using namespace std;
+#include<iostream>;
+using namespace std;
 //#include<vector>;
-//#include<string>;
+#include<string>;
+
 
 //c++ Primer 3.2
 //std::string line;
@@ -40,7 +41,8 @@
 //	else std::cout << "Input2 is longer." << std::endl;
 //}
 int main() {
-
+/*
+//E3.5
 	//string word;
 	//string phrase;
 	//string spacePhrase;
@@ -51,5 +53,23 @@ int main() {
 	//std::cout << phrase << std::endl;
 	//std::cout << spacePhrase << std::endl;
 
+//E3.6
+string word;
+cin >> word;
+for (auto &c : word){
+	c = 'X';
+}
+cout << word << endl;
+
+//E3.7
+string word;
+cin >> word;
+for (char &c : word){
+	c = 'X';
+}
+cout << word << endl;
+*/
+
 	return 0;
+
 }
