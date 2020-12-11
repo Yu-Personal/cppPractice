@@ -109,7 +109,7 @@ for (int n=0; n < phrase.size(); n++){
 	} //Method 2
 	cout << n << endl;
 }
-	cout << phrase << ":is the old phrase" << endl << newPhrase << ": is the new phrase" <<endl;
+	cout << phrase << ":is phrase" << endl << newPhrase << ": is newphrase" <<endl;
 	return 0;
 
 }
