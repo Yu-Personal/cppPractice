@@ -2,7 +2,7 @@
 using namespace std;
 //#include<vector>;
 #include<string>;
-string s;
+#include<vector>;
 
 //c++ Primer 3.2
 //std::string line;
@@ -54,65 +54,76 @@ int main() {
 	//std::cout << spacePhrase << std::endl;
 
 //E3.6
-string word;
-cin >> word;
-for (auto &c : word){
-	c = 'X';
-}
-cout << word << endl;
+	string word;
+	cin >> word;
+	for (auto &c : word){
+		c = 'X';
+	}
+	cout << word << endl;
 
 //E3.7
-string word;
-cin >> word;
-for (char &c : word){
-	c = 'X';
-}
-cout << word << endl;
+	string word;
+	cin >> word;
+	for (char &c : word){
+		c = 'X';
+	}
+	cout << word << endl;
 
 //E3.8
 //while loop
-string word, temp;
-cin >> word;
-temp = word;
-int n=0;
-while (n < word.size()) {
-	word[n] = 'X';
-	n++;
-	cout << n <<endl;
-}
-cout << "while: " << word << endl;
+	string word, temp;
+	cin >> word;
+	temp = word;
+	int n=0;
+	while (n < word.size()) {
+		word[n] = 'X';
+		n++;
+		cout << n <<endl;
+	}
+	cout << "while: " << word << endl;
 
-//tranditional for loop
-word = temp;
-for (int i = 0; i < word.size(); i++) {
-	word[i] = 'X';
-	cout << i << endl;
+	//tranditional for loop
+	word = temp;
+	for (int i = 0; i < word.size(); i++) {
+		word[i] = 'X';
+		cout << i << endl;
 
-}
-cout << "tranditional for: " << word << endl;
+	}
+	cout << "tranditional for: " << word << endl;
 
 
-string s;
-cout << s[0] << "s is:" << s << ";haha"<< endl; //doesn't give error but s will not cout anything
-cout << s[1] << "s1 is:" << s << ";haha"<< endl; //
+	string s;
+	cout << s[0] << "s is:" << s << ";haha"<< endl; //doesn't give error but s will not cout anything
+	cout << s[1] << "s1 is:" << s << ";haha"<< endl; //
 
 
 //E3.9 It is invalid because of undefined behavior but it won't give an error if you run it . s is not initiated.
 
 //E3.10
-string phrase, newPhrase;
-int i=0;
-getline(cin, phrase);
-for (int n=0; n < phrase.size(); n++){
-	//if (!ispunct(phrase[n])) newPhrase += phrase[n]; //Method 1
-	if (ispunct(phrase[n])) {
-		phrase.erase(phrase.begin()+n);
-		n--;
-	} //Method 2
-	cout << n << endl;
-}
-	cout << phrase << ":is phrase" << endl << newPhrase << ": is newphrase" <<endl;
+	string phrase, newPhrase;
+	int i=0;
+	getline(cin, phrase);
+	for (int n=0; n < phrase.size(); n++){
+		//if (!ispunct(phrase[n])) newPhrase += phrase[n]; //Method 1
+		if (ispunct(phrase[n])) {
+			phrase.erase(phrase.begin()+n);
+			n--;
+		} //Method 2
+		cout << n << endl;
+	}
+		cout << phrase << ":is phrase" << endl << newPhrase << ": is newphrase" <<endl;
 	*/
+
+//E3.14
+	vector<int> inputVector;
+	int value;
+	while (cin >> value) {
+		if (value == -1) {
+			break;
+		}
+		inputVector.push_back(value);
+	}
+
 
 
 	return 0;
