@@ -1,0 +1,5 @@
+﻿  cppPrimerPractice.cpp
+E:\workspace Cpp\cppPrimer_FifthEdition\cppPrimerPractice.cpp(1,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+E:\workspace Cpp\cppPrimer_FifthEdition\cppPrimerPractice.cpp(4,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+E:\workspace Cpp\cppPrimer_FifthEdition\cppPrimerPractice.cpp(5,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  cppPrimer_FifthEdition.vcxproj -> E:\workspace Cpp\cppPrimer_FifthEdition\Debug\cppPrimer_FifthEdition.exe

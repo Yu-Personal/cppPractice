@@ -1,0 +1,2 @@
+E:\workspace Cpp\cppPrimer_FifthEdition\Debug\cppPrimer_FifthEdition.exe
+E:\workspace Cpp\cppPrimer_FifthEdition\Debug\cppPrimer_FifthEdition.pdb
