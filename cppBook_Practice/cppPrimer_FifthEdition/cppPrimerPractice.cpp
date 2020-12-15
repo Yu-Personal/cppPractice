@@ -124,6 +124,9 @@ int main() {
 		inputVector.push_back(value);
 	}
 
+	for (auto i: inputVector) {
+		std::cout << i << std::endl;
+	}
 
 
 	return 0;
