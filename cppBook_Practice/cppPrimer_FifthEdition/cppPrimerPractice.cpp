@@ -114,11 +114,34 @@ int main() {
 			cout << phrase << ":is phrase" << endl << newPhrase << ": is newphrase" <<endl;
 		*/
 
-		//E3.14
-	vector<int> inputVector;
-	int value;
+	//E3.13
+	/*vector <int> v1; 
+	vector <int> v2(10);
+	vector<int> v3(10, 42);
+	vector<int> v4{ 10 };
+	vector<int> v5{ 10, 42 };
+	vector<string> v6{ 10 };
+	vector<string> v7{ 10, "hi" };*/
+
+	//E3.14
+	//vector<int> inputVector;
+	//int value;
+	//while (cin >> value) {
+	//	if (value == -1) {
+	//		break;
+	//	}
+	//	inputVector.push_back(value);
+	//}
+
+	//for (auto i: inputVector) {
+	//	std::cout << i << std::endl;
+	//}
+
+	//E3.15
+	/*vector<std::string> inputVector;
+	std::string value;
 	while (cin >> value) {
-		if (value == -1) {
+		if (value == "exit") {
 			break;
 		}
 		inputVector.push_back(value);
@@ -126,7 +149,46 @@ int main() {
 
 	for (auto i: inputVector) {
 		std::cout << i << std::endl;
-	}
+	}*/
+
+	//E3.16
+	vector<int> v1;
+	vector<int> v2(10);
+	vector<int> v3(10, 42);
+	vector<int> v4{ 10 };
+	vector<int> v5{ 10, 42 };
+	vector<string> v6{ 10 };
+	vector<string> v7{ 10, "hi" };
+
+	std::cout << v1.size() << std::endl;
+	for (auto i : v1)
+		std::cout << i << " ";
+	std::cout << std::endl;
+	std::cout << v2.size() << std::endl;
+	for (auto i : v2)
+		std::cout << i << " ";
+	std::cout << std::endl;
+	std::cout << v3.size() << std::endl;
+	for (auto i : v3)
+		std::cout << i << " ";
+	std::cout << std::endl;
+	std::cout << v4.size() << std::endl;
+	for (auto i : v4)
+		std::cout << i << " ";
+	std::cout << std::endl;
+	std::cout << v5.size() << std::endl;
+	for (auto i : v5)
+		std::cout << i << " ";
+	std::cout << std::endl;
+	std::cout << v6.size() << std::endl;
+	for (auto i : v6)
+		std::cout << i << " ";
+	std::cout << std::endl;
+	std::cout << v7.size() << std::endl;
+	for (auto i : v7)
+		std::cout << i << " ";
+	std::cout << std::endl;
+
 
 
 	return 0;
