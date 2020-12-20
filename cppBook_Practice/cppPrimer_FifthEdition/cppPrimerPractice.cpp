@@ -239,12 +239,91 @@ using namespace std;
 //for (decltype(values.size()) i = 0; i < values.size()/2; i++) {
 //	std::cout << values[i] + values[values.size() - i - 1] << " ";
 //}
+//if (values.size() % 2 == 1) {
+//	std::cout << values[(values.size() / 2)];
+//}
+
+//E3.21
+//vector<int> v1;
+//vector<int> v2(10);
+//vector<int> v3(10, 42);
+//vector<int> v4{ 10 };
+//vector<int> v5{ 10, 42 };
+//vector<string> v6{ 10 };
+//vector<string> v7{ 10, "hi" };
+//std::cout << v1.size() << std::endl;
+//for (auto it = v1.cbegin(); it != v1.cend(); ++it) {
+//	std::cout << *it << " ";
+//}
+//std::cout << std::endl;
+//std::cout << v2.size() << std::endl;
+//for (auto it = v2.cbegin(); it != v2.cend(); ++it) {
+//	std::cout << *it << " ";
+//}
+//std::cout << std::endl;
+//std::cout << v3.size() << std::endl;
+//for (auto it = v3.cbegin(); it != v3.cend(); ++it) {
+//	std::cout << *it << " ";
+//}
+//std::cout << std::endl;
+//std::cout << v4.size() << std::endl;
+//for (auto it = v4.cbegin(); it != v4.cend(); ++it) {
+//	std::cout << *it << " ";
+//}
+//std::cout << std::endl;
+//std::cout << v5.size() << std::endl;
+//for (auto it = v5.cbegin(); it != v5.cend(); ++it) {
+//	std::cout << *it << " ";
+//}
+//std::cout << std::endl;
+//std::cout << v6.size() << std::endl;
+//for (auto it = v6.cbegin(); it != v6.cend(); ++it) {
+//	std::cout << *it << " ";
+//}
+//std::cout << std::endl;
+//std::cout << v7.size() << std::endl;
+//for (auto it = v7.cbegin(); it != v7.cend(); ++it) {
+//	std::cout << *it << " ";
+//}
+//std::cout << std::endl;
+
+//E3.22
+//vector<string> text;
+//std::string phrase;
+//while (std::getline(std::cin, phrase)) {
+//	text.push_back(phrase);
+//}
+//std::cout << "Orignal print: " << std::endl;
+//for (auto it = text.cbegin(); it != text.cend(); ++it) {
+//	std::cout << *it << std::endl;
+//}
+//std::cout << "New print: " << std::endl;
+//for (auto it = text.begin(); it != text.end() && !it->empty(); ++it) {
+//	for (auto& i : *it) {
+//		i = std::toupper(i);
+//	}
+//}
+//for (auto it = text.cbegin(); it != text.cend(); ++it) {
+//	std::cout << *it << std::endl;
+//}
+
+//E3.23
+//vector<int> ivec;
+//for (int i = 0; i < 10; ++i) {
+//	ivec.push_back(rand() % 10);
+//}
+//for (auto it : ivec) {
+//	std::cout << it << " ";
+//}
+//std::cout << std::endl;
+//for (auto it = ivec.begin(); it != ivec.end(); ++it) {
+//	*it = 2 * *it;
+//}
+//for (auto it : ivec) {
+//	std::cout << it << " ";
+//}
 
 int main() {
-
-
-
-
 
 
 
