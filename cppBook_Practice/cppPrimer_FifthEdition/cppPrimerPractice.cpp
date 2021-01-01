@@ -372,8 +372,7 @@ using namespace std;
 
 //E3.26
 //Exercise 3.26 : In the binary search program on page 112, why did we write mid = beg + (end - beg) / 2; instead of mid = (beg + end) / 2; ?
-//We wanted to add the difference between the end and the beginning not just divide it by two.
-//By doing it the first way we are actually adding a difference instead of just dividing the total by 2.
+//We can not add two iterators, but we can add an "iterator" and "difference_type".
 
 int main() {
 
