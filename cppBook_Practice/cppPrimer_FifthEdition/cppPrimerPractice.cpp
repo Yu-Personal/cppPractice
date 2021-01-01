@@ -324,41 +324,63 @@ using namespace std;
 //}
 
 //E3.24
-	//int integers;
-	//std::vector<int> vector;
-	//while (cin >> integers) {
-	//	vector.push_back(integers);
-	//}
-	//auto beg = vector.begin();
-	//auto end = vector.end();
-	//while (beg != end - 1) {
-	//	std::cout << *beg + *(beg + 1) << " ";
-	//	beg += 1;
-	//}
-	//std::cout << std::endl;
-	//beg = vector.begin();
-	//end = vector.end();
-	//while (beg < end) {
-	//	std::cout << *beg + *(end-1) << " ";
-	//	beg += 1;
-	//	end -= 1;
-	//}
+//int integers;
+//std::vector<int> vector;
+//while (cin >> integers) {
+//	vector.push_back(integers);
+//}
+//auto beg = vector.begin();
+//auto end = vector.end();
+//while (beg != end - 1) {
+//	std::cout << *beg + *(beg + 1) << " ";
+//	beg += 1;
+//}
+//std::cout << std::endl;
+//beg = vector.begin();
+//end = vector.end();
+//while (beg < end) {
+//	std::cout << *beg + *(end-1) << " ";
+//	beg += 1;
+//	end -= 1;
+//}
+
+//E3.25
+//Exercise 3.25: Rewrite the grade clustering program from § 3.3.3 (p. 104) using iterators instead of subscripts.
+//vector<unsigned> scores(11, 0); // 11 buckets, all initially 0
+//vector<unsigned> scores1(11, 0);
+//unsigned grade;
+//int bucketNumber;
+//auto beg = scores1.begin();
+//while (cin >> grade) {      // read the grades
+//	if (grade <= 100) {       // handle only valid grades
+//		++scores[grade / 10]; // increment the counter for the current cluster
+//	}
+//
+//	bucketNumber = grade / 10;
+//	if (bucketNumber < 11) {
+//		*(beg + bucketNumber) += 1;
+//	}
+//}
+//std::cout << "original code using subscripts: ";
+//for (auto i : scores) {
+//	std::cout << i << " ";
+//}
+//std::cout << std::endl << "new code using iterators: ";
+//for (auto i : scores1) {
+//	std::cout << i << " ";
+//}
+
+//E3.26
+//Exercise 3.26 : In the binary search program on page 112, why did we write mid = beg + (end - beg) / 2; instead of mid = (beg + end) / 2; ?
+//We wanted to add the difference between the end and the beginning not just divide it by two.
+//By doing it the first way we are actually adding a difference instead of just dividing the total by 2.
 
 int main() {
 
 	
-	//E3.25
-	//Exercise 3.25: Rewrite the grade clustering program from § 3.3.3 (p. 104) using iterators instead of subscripts.
-	vector<unsigned> scores(11, 0); // 11 buckets, all initially 0
-	unsigned grade;
-	while (cin >> grade) {      // read the grades
-		if (grade <= 100)       // handle only valid grades
-			++scores[grade / 10]; // increment the counter for the current cluster
-	}
+	
 
-
-	//E3.26
-	//Exercise 3.26 : In the binary search program on page 112, why did we write mid = beg + (end - beg) / 2; instead of mid = (beg + end) / 2; ?
+	
 
 	return 0;
 }
