@@ -374,10 +374,86 @@ using namespace std;
 //Exercise 3.26 : In the binary search program on page 112, why did we write mid = beg + (end - beg) / 2; instead of mid = (beg + end) / 2; ?
 //We can not add two iterators, but we can add an "iterator" and "difference_type".
 
-int main() {
+//E3.31
+//constexpr size_t array_size = 10;
+//int array[array_size];
+//for (int i = 0; i < array_size; i++) {
+//	array[i] = i;
+//}
+//for (auto& i : array) {
+//	std::cout << i << " ";
+//}
 
-	
-	
+//E3.32
+//constexpr size_t array_size = 10;
+//int array[array_size];
+//for (int i = 0; i < array_size; i++) {
+//	array[i] = i;
+//}
+//int array1[array_size];
+//for (int i = 0; i < array_size; i++) {
+//	array1[i] = array[i];
+//}
+//for (auto& i : array) {
+//	std::cout << i << " ";
+//}
+//std::cout << std::endl;
+//for (auto& i : array1) {
+//	std::cout << i << " ";
+//}
+//std::cout << std::endl;
+//vector<int> array2;
+//for (int i = 0; i < array_size; i++) {
+//	array2.push_back(i);
+//}
+//for (auto& i : array2) {
+//	std::cout << i << " ";
+//}
+
+//E3.35
+//constexpr size_t array_size = 10;
+//int array[array_size];
+//int* beg = begin(array), * last = end(array);
+//while (beg != last) {
+//	*beg = 0;
+//	beg++;
+//}
+//for (auto& i : array) {
+//	std::cout << i << " ";
+//}
+//std::cout << std::endl;
+//
+
+//E3.36
+//constexpr size_t array_size1 = 10;
+//constexpr size_t array_size2 = 10;
+//int array1[array_size1] = {1};
+//int array2[array_size2] = {};
+//bool equal = true;
+//if (array_size1 != array_size2) {
+//	std::cout << "Both arrays are NOT the same.";
+//}
+//else{
+//	for (size_t i = 0; i < array_size1; i++) {
+//		if (array1[i] != array2[i]) {
+//			equal = false;
+//			std::cout << "Both arrays are NOT the same.";
+//			break;
+//		}
+//	}
+//}
+//if (equal == true) {
+//	std::cout << "Both arrays are the same.";
+//}
+//std::cout << std::endl;
+//vector<int> vec1 = {1};
+//vector<int> vec2 = {};
+//if (vec1 == vec2) {
+//	std::cout << "Both vectors are the same.";
+//}
+//else std::cout << "Both vectors are NOT the same.";
+
+int main() {
 
 	
 
