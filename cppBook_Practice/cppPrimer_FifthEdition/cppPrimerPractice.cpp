@@ -480,19 +480,20 @@
 //	std::cout << "Word4 is less than Word3.";
 //}
 
+//E3.40
+//char word1[] = "Kevin";
+//char word2[] = "Wei";
+//char word3[9];
+//strcpy_s(word3, word1);
+//std::cout << word3 << std::endl;
+//strcat_s(word3, word2);
+//std::cout << word3;
+
 int main() {
 
 	
 
-	//E3.40
-	char word1[] = "Kevin";
-	char word2[] = "Wei";
-	//auto* beg1 = begin(word1), * last1 = end(word1), * beg2 = begin(word2), * last2 = end(word2);
-	//constexpr auto difSize = (last1 - beg1) + (last2 - beg2);
-	char word3[9];
-	strcpy(word3, word1);
-	strcat(word3, word2);
-	std::cout << word3;
+
 	
 
 	return 0;
