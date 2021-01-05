@@ -1,5 +1,6 @@
 ﻿  cppPrimerPractice.cpp
 E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(1,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(4,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(5,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  cppPrimer_FifthEdition.vcxproj -> E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\Debug\cppPrimer_FifthEdition.exe
+E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(2,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(3,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(493,2): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(494,2): error C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.

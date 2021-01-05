@@ -1,8 +1,9 @@
 #include<iostream>;
-using namespace std;
-//#include<vector>;
 #include<string>;
 #include<vector>;
+#include<stdio.h>
+#include <string.h>
+
 
 //E3.2
 //std::string line;
@@ -453,8 +454,45 @@ using namespace std;
 //}
 //else std::cout << "Both vectors are NOT the same.";
 
+//E3.39
+//std::string word1 = "Wei";
+//std::string word2 = "Wei";
+//if (word1 == word2) {
+//	std::cout << "Word1 and Word2 are the same.";
+//}
+//else if (word1 < word2) {
+//	std::cout << "Word1 is less than Word2.";
+//}
+//else{
+//	std::cout << "Word2 is less than Word1.";
+//}
+//std::cout << std::endl;
+//char word3[] = { 'W', 'e', 'i','\0'};
+//char word4[] = { 'W', 'e', 'i','\0'};
+//int answer = strcmp(word3, word4);
+//if (answer == 0) {
+//	std::cout << "Word3 and Word4 are the same.";
+//}
+//else if (answer < 0) {
+//	std::cout << "Word3 is less than Word4.";
+//}
+//else {
+//	std::cout << "Word4 is less than Word3.";
+//}
+
 int main() {
 
+	
+
+	//E3.40
+	char word1[] = "Kevin";
+	char word2[] = "Wei";
+	//auto* beg1 = begin(word1), * last1 = end(word1), * beg2 = begin(word2), * last2 = end(word2);
+	//constexpr auto difSize = (last1 - beg1) + (last2 - beg2);
+	char word3[9];
+	strcpy(word3, word1);
+	strcat(word3, word2);
+	std::cout << word3;
 	
 
 	return 0;
