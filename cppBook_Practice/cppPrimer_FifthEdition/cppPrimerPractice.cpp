@@ -414,7 +414,7 @@
 //E3.35
 //constexpr size_t array_size = 10;
 //int array[array_size];
-//int* beg = begin(array), * last = end(array);
+//int* beg = std::begin(array), * last = std::end(array);
 //while (beg != last) {
 //	*beg = 0;
 //	beg++;
@@ -489,12 +489,25 @@
 //strcat_s(word3, word2);
 //std::cout << word3;
 
+//E3.41
+//int array[] = { 0,1,2,3,4 };
+//std::vector<int> ivec(std::begin(array), std::end(array));
+//for (auto& i : ivec) std::cout << i << " ";
+
+//E3.42
+//std::vector<int> ivec = { 0,1,2,3,4 };
+//int array[5];
+//for (int i = 0; i < ivec.size(); i++) {
+//	array[i] = ivec[i];
+//}
+//for (auto& i : array) std::cout << i << " ";
+
 int main() {
 
 	
-
-
 	
+
+
 
 	return 0;
 }

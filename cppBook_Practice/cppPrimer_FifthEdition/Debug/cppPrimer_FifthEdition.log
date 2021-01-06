@@ -2,4 +2,5 @@
 E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(1,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(2,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(3,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(502,20): warning C4018: '<': signed/unsigned mismatch
   cppPrimer_FifthEdition.vcxproj -> E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\Debug\cppPrimer_FifthEdition.exe
