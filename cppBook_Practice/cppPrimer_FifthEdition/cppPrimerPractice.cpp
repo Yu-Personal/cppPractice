@@ -502,10 +502,103 @@
 //}
 //for (auto& i : array) std::cout << i << " ";
 
-int main() {
+//E3.43
+//int ia[3][4] = {1,2,3,4,5,6,7,8,9,10,11,12};
+//for (int (&i)[4] : ia) {
+//	for (int j: i) {
+//		std::cout << j << " ";
+//	}
+//	std::cout << std::endl;
+//}
+//for (size_t i = 0; i < 3; ++i) {
+//	for (size_t j = 0; j < 4; ++j) {
+//		std::cout << ia[i][j] << " ";
+//	}
+//	std::cout << std::endl;
+//}
+//for (int (*i)[4] = ia; i < ia + 3; ++i) {
+//	for (int *j = *i; j < *i + 4; ++j) {
+//		std::cout << *j << " ";
+//	}
+//	std::cout << std::endl;
+//}
+//for (int (*i)[4] = std::begin(ia); i < std::end(ia); ++i) {
+//	for (int *j = std::begin(*i); j < std::end(*i); ++j) {
+//		std::cout<<*j<<" ";
+//	}
+//	std::cout << std::endl;
+//}
 
-	
-	
+//E3.44
+//using int_array = int[4];
+//using myint = int;
+//using mysize_t = size_t;
+//int ia[3][4] = {1,2,3,4,5,6,7,8,9,10,11,12};
+//for (int_array &i : ia) {
+//	for (myint j : i) {
+//		std::cout << j << " ";
+//	}
+//	std::cout << std::endl;
+//}
+//for (mysize_t i = 0; i < 3; ++i) {
+//	for (mysize_t j = 0; j < 4; ++j) {
+//		std::cout << ia[i][j] << " ";
+//	}
+//	std::cout << std::endl;
+//}
+//for (int_array (*i) = ia; i < ia + 3; ++i) {
+//	for (myint* j = *i; j < *i + 4; ++j) {
+//		std::cout << *j << " ";
+//	}
+//	std::cout << std::endl;
+//}
+//for (int_array (*i) = std::begin(ia); i < std::end(ia); ++i) {
+//	for (myint* j = std::begin(*i); j < std::end(*i); ++j) {
+//		std::cout << *j << " ";
+//	}
+//	std::cout << std::endl;
+//}
+
+//E3.45
+//int ia[3][4] = {1,2,3,4,5,6,7,8,9,10,11,12};
+//for (auto &i : ia) {
+//	for (auto j : i) {
+//		std::cout << j << " ";
+//	}
+//	std::cout << std::endl;
+//}
+//for (auto i = 0; i < 3; ++i) {
+//	for (auto j = 0; j < 4; ++j) {
+//		std::cout << ia[i][j] << " ";
+//	}
+//	std::cout << std::endl;
+//}
+//for (auto (*i) = ia; i < ia + 3; ++i) {
+//	for (auto* j = *i; j < *i + 4; ++j) {
+//		std::cout << *j << " ";
+//	}
+//	std::cout << std::endl;
+//}
+//for (auto (*i) = std::begin(ia); i < std::end(ia); ++i) {
+//	for (auto* j = std::begin(*i); j < std::end(*i); ++j) {
+//		std::cout << *j << " ";
+//	}
+//	std::cout << std::endl;
+//}
+
+////E4.1
+//105
+//
+////E4.2
+//* (vec.begin())
+//((* (vec.begin()))+1)
+//E4.3
+//I find that this is an acceptable trade-off.
+//I believe that it is up to the programmer to make the statement explicit or not.
+//If the programmer is not explicit about their code then they do not care of the outcome and so it is reflected in the output.
+
+
+int main() {
 
 
 
