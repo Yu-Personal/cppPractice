@@ -588,10 +588,11 @@
 
 ////E4.1
 //105
-//
+
 ////E4.2
 //* (vec.begin())
 //((* (vec.begin()))+1)
+
 //E4.3
 //I find that this is an acceptable trade-off.
 //I believe that it is up to the programmer to make the statement explicit or not.
@@ -600,6 +601,23 @@
 
 int main() {
 
+	//E4.4
+	std::cout << "Without parentheses: " << 12 / 3 * 4 + 5 * 15 + 24 % 4 / 2 << std::endl;
+	std::cout << "With parentheses: " << ((12 / 3) * 4) + (5 * 15) + ((24 % 4) / 2) << std::endl;
+
+	//E4.5
+	std::cout << "(a) " << -30 * 3 + 21 / 5 << std::endl; // -86
+	std::cout << "(b) " << -30 + 3 * 21 / 5 << std::endl; // -18
+	std::cout << "(c) " << 30 / 3 * 21 % 5 << std::endl; // 0
+	std::cout << "(d) " << -30 / 3 * 21 % 4 << std::endl; // -2
+
+//E4.6
+	int i;
+	std::cin >> i;
+	if (!(i % 2)) std::cout << "Even";
+	else std::cout << "Odd";
+
+//E4.7
 
 
 	return 0;
