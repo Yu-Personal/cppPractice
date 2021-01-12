@@ -598,26 +598,28 @@
 //I believe that it is up to the programmer to make the statement explicit or not.
 //If the programmer is not explicit about their code then they do not care of the outcome and so it is reflected in the output.
 
+//E4.4
+//std::cout << "Without parentheses: " << 12 / 3 * 4 + 5 * 15 + 24 % 4 / 2 << std::endl;
+//std::cout << "With parentheses: " << ((12 / 3) * 4) + (5 * 15) + ((24 % 4) / 2) << std::endl;
+
+//E4.5
+//std::cout << "(a) " << -30 * 3 + 21 / 5 << std::endl; // -86
+//std::cout << "(b) " << -30 + 3 * 21 / 5 << std::endl; // -18
+//std::cout << "(c) " << 30 / 3 * 21 % 5 << std::endl; // 0
+//std::cout << "(d) " << -30 / 3 * 21 % 4 << std::endl; // -2
+
+//E4.6
+//int i;
+//std::cin >> i;
+//if (!(i % 2)) std::cout << "Even";
+//else std::cout << "Odd";
+
+//E4.7
+//Overflow is when the physical memory of the computer can not hold he correct result of the expression.
 
 int main() {
 
-	//E4.4
-	std::cout << "Without parentheses: " << 12 / 3 * 4 + 5 * 15 + 24 % 4 / 2 << std::endl;
-	std::cout << "With parentheses: " << ((12 / 3) * 4) + (5 * 15) + ((24 % 4) / 2) << std::endl;
 
-	//E4.5
-	std::cout << "(a) " << -30 * 3 + 21 / 5 << std::endl; // -86
-	std::cout << "(b) " << -30 + 3 * 21 / 5 << std::endl; // -18
-	std::cout << "(c) " << 30 / 3 * 21 % 5 << std::endl; // 0
-	std::cout << "(d) " << -30 / 3 * 21 % 4 << std::endl; // -2
-
-//E4.6
-	int i;
-	std::cin >> i;
-	if (!(i % 2)) std::cout << "Even";
-	else std::cout << "Odd";
-
-//E4.7
 
 
 	return 0;
