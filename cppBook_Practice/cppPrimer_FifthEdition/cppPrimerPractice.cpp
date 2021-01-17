@@ -617,7 +617,23 @@
 //E4.7
 //Overflow is when the physical memory of the computer can not hold he correct result of the expression.
 
+//E4.10
+/*int input;
+while (std::cin >> input && input != 42) {
+	std::cout << input << std::endl;
+}*/
+
+//E4.11
+/*int a, b, c, d;
+std::cin >> a >> b >> c >> d;
+if (a > b && b > c && c > d) {
+	std::cout << "Success" << std::endl;
+}
+else std::cout << "Failure" << std::endl;*/
+
 int main() {
+
+	
 
 
 
