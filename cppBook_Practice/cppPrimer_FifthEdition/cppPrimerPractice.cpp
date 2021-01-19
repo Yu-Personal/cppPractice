@@ -633,8 +633,103 @@ else std::cout << "Failure" << std::endl;*/
 
 int main() {
 
-	
+	//E4.21
+	/*std::vector<int> ivec = {1,2,3,4,5,6,7,9};
+	for (auto i : ivec) {
+		std::cout << i << " ";
+	}
+	std::cout << std::endl;
+	for (auto &i : ivec) {
+		(i%2) ? i *= 2 : i = i;
+	}
+	for (auto i : ivec) {
+		std::cout << i << " ";
+	}*/
 
+	//E4.22
+	/*int grade;
+	std::string finalgrade;
+	while (std::cin >> grade) {
+		finalgrade = (grade > 90) ? "high pass"	: (grade > 75) ? "pass": (grade < 60) ? "fail" : "low pass";
+		std::cout << finalgrade << std::endl;
+	}
+	while (std::cin >> grade) {
+		if (grade > 90) {
+			finalgrade = "high pass";
+		}
+		else if (grade > 75) {
+			finalgrade = "pass";
+		}
+		else if (grade > 59) {
+			finalgrade = "low pass";
+		}
+		else finalgrade = "fail";
+		std::cout << finalgrade << std::endl;
+	}*/
+
+	//E4.23
+	//std::string s = "word";
+	//std::string pl = (((s + (s[s.size() - 1])) == 's') ? "" : "s";
+
+	//E4.25
+	//01110001
+	//~q = 10001110
+	//~'q' << 6 = 1110 0011 1000 0000
+
+	//E4.26
+	// We would only have 16 bits or 16 students
+
+	//E4.27
+	//a. 0011 & 0111 = 0011
+	//b. 0011 | 0111 = 0111
+	//c. 0011 && 0111 = 1
+	//d. 0011 || 0111 = 1
+
+	//E4.28
+	//std::cout << sizeof(bool) << std::endl;
+	//std::cout << sizeof(char) << std::endl;
+	//std::cout << sizeof(int) << std::endl;
+	//std::cout << sizeof(float) << std::endl;
+	//std::cout << sizeof(double) << std::endl;
+
+	//E4.29 help
+	//int x[10];   int* p = x;
+	//std::cout << sizeof(x) / sizeof(*x) << std::endl;
+	//std::cout << sizeof(p) / sizeof(*p) << std::endl;
+
+	//E4.30
+	//a. sizeof(x)+y
+	//b. sizeof(p->(mem[i]))
+	//c. sizeof(a)<b
+	//d. sizeof(f())
+
+	//E4.31 help
+	/*std::vector<int> ivec = {1,2,3,4,5,6,7,9};
+	std::vector<int> ::size_type cnt = ivec.size();
+	for (std::vector<int>::size_type ix = 0; ix != ivec.size(); ix++, cnt--) ivec[ix] = cnt;
+	for (auto& i : ivec) {
+		std::cout << i << " ";
+	}*/
+
+	//E4.34
+	/*a. converts fval to bool
+	b. converts ival to float and the solution of the addtion converts to double
+	c. converts cval to int, then converts result of ival*cval to double*/
+
+	//E4.35
+	/*a. 'a' is converted to a int then the result is converted to the char value
+	b. ival is converted to double, the ui and result are converted dependent on which one is larger then converted to float
+	c. ui or fval is converted to the larger one then the result is converted to double at the end
+	d. ival converted to float, then result converted to double, then result converted to integer than char value*/
+
+	//E4.36
+	//i *= static_cast<int>(d)
+
+	//E4.37
+	//a. pv = static_cast<void>(const_cast<string*>(ps))
+	//b. i = static_cast<int>(*pc)
+	//c. pv = static_cast<void*>(&d)
+	//d. pc = static_cast<char*>(pv)
 
 
 
