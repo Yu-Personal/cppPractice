@@ -732,6 +732,33 @@ int main() {
 	//d. pc = static_cast<char*>(pv)
 
 
+	//E5.3
+	//original while loop
+	int ival = 0, sum = 0;
+	while (ival <= 10) {
+		sum += ival;
+		++ival;
+	}
+	std::cout << sum << " " << ival << '\n';
+
+	//Modified while loop
+	ival = 0, sum = 0;
+	while (ival <= 10) sum += ival++;
+	std::cout << sum << " " << ival << '\n';
+
+	//Using comma operand
+	
+	for (ival = 0, sum = 0; ival <= 10; sum += ival, ++ival);
+	std::cout << sum << " " << ival << '\n';
+
+
+	//E5.4
+	if (grade > 90) {
+		std::cout << 
+	}
+
+
+
 
 	return 0;
 }
