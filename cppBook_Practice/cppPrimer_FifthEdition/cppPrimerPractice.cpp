@@ -618,147 +618,283 @@
 //Overflow is when the physical memory of the computer can not hold he correct result of the expression.
 
 //E4.10
-/*int input;
-while (std::cin >> input && input != 42) {
-	std::cout << input << std::endl;
-}*/
+//int input;
+//while (std::cin >> input && input != 42) {
+	//std::cout << input << std::endl;
+//}
 
 //E4.11
-/*int a, b, c, d;
-std::cin >> a >> b >> c >> d;
-if (a > b && b > c && c > d) {
-	std::cout << "Success" << std::endl;
-}
-else std::cout << "Failure" << std::endl;*/
+//int a, b, c, d;
+//std::cin >> a >> b >> c >> d;
+//if (a > b && b > c && c > d) {
+	//std::cout << "Success" << std::endl;
+//}
+//else std::cout << "Failure" << std::endl;
+
+//E4.21
+//std::vector<int> ivec = {1,2,3,4,5,6,7,9};
+//for (auto i : ivec) {
+	//std::cout << i << " ";
+//}
+//std::cout << std::endl;
+//for (auto &i : ivec) {
+	//(i%2) ? i *= 2 : i = i;
+//}
+//for (auto i : ivec) {
+	//std::cout << i << " ";
+//}
+
+//E4.22
+//int grade;
+//std::string finalgrade;
+//while (std::cin >> grade) {
+//	finalgrade = (grade > 90) ? "high pass"	: (grade > 75) ? "pass": (grade < 60) ? "fail" : "low pass";
+//	std::cout << finalgrade << std::endl;
+//}
+//while (std::cin >> grade) {
+//	if (grade > 90) {
+//		finalgrade = "high pass";
+//	}
+//	else if (grade > 75) {
+//		finalgrade = "pass";
+//	}
+//	else if (grade > 59) {
+//		finalgrade = "low pass";
+//	}
+//	else finalgrade = "fail";
+//	std::cout << finalgrade << std::endl;
+//}
+
+//E4.23
+//std::string s = "word";
+//std::string pl = (((s + (s[s.size() - 1])) == 's') ? "" : "s";
+
+//E4.25
+//01110001
+//~q = 10001110
+//~'q' << 6 = 1110 0011 1000 0000
+
+//E4.26
+// We would only have 16 bits or 16 students
+
+//E4.27
+//a. 0011 & 0111 = 0011
+//b. 0011 | 0111 = 0111
+//c. 0011 && 0111 = 1
+//d. 0011 || 0111 = 1
+
+//E4.28
+//std::cout << sizeof(bool) << std::endl;
+//std::cout << sizeof(char) << std::endl;
+//std::cout << sizeof(int) << std::endl;
+//std::cout << sizeof(float) << std::endl;
+//std::cout << sizeof(double) << std::endl;
+
+//E4.29 help
+//int x[10];   int* p = x;
+//std::cout << sizeof(x) / sizeof(*x) << std::endl;
+//std::cout << sizeof(p) / sizeof(*p) << std::endl;
+
+//E4.30
+//a. sizeof(x)+y
+//b. sizeof(p->(mem[i]))
+//c. sizeof(a)<b
+//d. sizeof(f())
+
+//E4.31 help
+//std::vector<int> ivec = {1,2,3,4,5,6,7,9};
+//std::vector<int> ::size_type cnt = ivec.size();
+//for (std::vector<int>::size_type ix = 0; ix != ivec.size(); ix++, cnt--) ivec[ix] = cnt;
+//for (auto& i : ivec) {
+	//std::cout << i << " ";
+//}
+
+//E4.34
+//a. converts fval to bool
+//b. converts ival to float and the solution of the addtion converts to double
+//c. converts cval to int, then converts result of ival*cval to double
+
+//E4.35
+//a. 'a' is converted to a int then the result is converted to the char value
+//b. ival is converted to double, the ui and result are converted dependent on which one is larger then converted to float
+//c. ui or fval is converted to the larger one then the result is converted to double at the end
+//d. ival converted to float, then result converted to double, then result converted to integer than char value
+
+//E4.36
+//i *= static_cast<int>(d)
+
+//E4.37
+//a. pv = static_cast<void>(const_cast<string*>(ps))
+//b. i = static_cast<int>(*pc)
+//c. pv = static_cast<void*>(&d)
+//d. pc = static_cast<char*>(pv)
+
+////E5.3
+////original while loop
+//int ival = 0, sum = 0;
+//while (ival <= 10) {
+//	sum += ival;
+//	++ival;
+//}
+//std::cout << sum << " " << ival << '\n';
+////Modified while loop
+//ival = 0, sum = 0;
+//while (ival <= 10) sum += ival++;
+//std::cout << sum << " " << ival << '\n';
+////Using comma operand
+//for (ival = 0, sum = 0; ival <= 10; sum += ival, ++ival);
+//std::cout << sum << " " << ival << '\n';
+
+////E5.5
+//std::string outputString = "";
+//for (int grade = 0; grade <= 100; grade += 10) {
+//	if (grade == 100) {
+//		std::cout << "A++" << std::endl;
+//	}
+//	else if (grade > 89) {
+//		std::cout << "A" << std::endl;
+//	}
+//	else if (grade > 79) {
+//		std::cout << "B" << std::endl;
+//	}
+//	else if (grade > 69) {
+//		std::cout << "C" << std::endl;
+//	}
+//	else if (grade > 59) {
+//		std::cout << "D" << std::endl;
+//	}
+//	else std::cout << "F" << std::endl;
+
+//	//E5.6
+//	(grade == 100) ? outputString = "A++" : (grade > 89) ? outputString = "A" : (grade > 79) ? outputString = "B" : (grade > 69) ? outputString = "C" : (grade > 59) ? outputString = "D" : outputString = "F";
+//	std::cout << outputString << std::endl;
+//	std::cout << std::endl;
+//}
+
+//E5.9
+//std::string input;
+//int vowels = 0;
+//while (std::cin >> input) {
+//	for (auto& i : input) {
+//		if (i == 'a' || i == 'e' || i == 'i' || i == 'o' || i == 'u') {
+//			++vowels;
+//		}
+//	}
+//	std::cout << "Number of values: " << vowels << std::endl;
+//}
+
+//E5.10
+//int aCnt, eCnt, iCnt, oCnt, uCnt;
+//aCnt = eCnt = iCnt = oCnt = uCnt = 0;
+//char ch;
+//while (std::cin >> ch) {
+//	// if ch is a vowel, increment the appropriate counter
+//	switch (ch) {
+//	case 'a':
+//		++aCnt;
+//		break;
+//	case 'e':
+//		++eCnt;
+//		break;
+//	case 'i':
+//		++iCnt;
+//		break;
+//	case 'o':
+//		++oCnt;
+//		break;
+//	case 'u':
+//		++uCnt;
+//		break;
+//	case 'A':
+//		++aCnt;
+//		break;
+//	case 'E':
+//		++eCnt;
+//		break;
+//	case 'I':
+//		++iCnt;
+//		break;
+//	case 'O':
+//		++oCnt;
+//		break;
+//	case 'U':
+//		++uCnt;
+//		break;
+//	}
+//	std::cout << "a: " << aCnt << " e: " << eCnt << " i: " << iCnt << " o: " << oCnt << " u: " << uCnt<<std::endl;
+//}
+
+//E5.11
+//std::string input;
+////char ch;
+//int vowelCnt = 0;
+//int blankCnt = 0;
+//int tabCnt = 0;
+//int newlineCnt = 0;
+//int otherCnt = 0;
+//// if ch is a vowel, increment the appropriate counter
+//while(getline(std::cin,input)){
+//	for (auto& ch : input) {
+//		switch (ch) {
+//		case 'a': case 'e': case 'i': case 'o': case 'u': case 'A': case 'E': case 'I': case 'O': case 'U':
+//			++vowelCnt;
+//			break;
+//		case ' ':
+//			++blankCnt;
+//			break;
+//		case '\t':
+//			++tabCnt;
+//			break;
+//		//case '\n':
+//			//++newlineCnt;
+//			//break;
+//		default:
+//			++otherCnt;
+//			break;
+//		}
+//	}
+//	++newlineCnt;
+//	std::cout << "vowels: " << vowelCnt << " blanks: " << blankCnt << " tabs: " << tabCnt << " newline: " << newlineCnt << " others: " << otherCnt << std::endl;
+//}
 
 int main() {
 
-	//E4.21
-	/*std::vector<int> ivec = {1,2,3,4,5,6,7,9};
-	for (auto i : ivec) {
-		std::cout << i << " ";
-	}
-	std::cout << std::endl;
-	for (auto &i : ivec) {
-		(i%2) ? i *= 2 : i = i;
-	}
-	for (auto i : ivec) {
-		std::cout << i << " ";
-	}*/
-
-	//E4.22
-	/*int grade;
-	std::string finalgrade;
-	while (std::cin >> grade) {
-		finalgrade = (grade > 90) ? "high pass"	: (grade > 75) ? "pass": (grade < 60) ? "fail" : "low pass";
-		std::cout << finalgrade << std::endl;
-	}
-	while (std::cin >> grade) {
-		if (grade > 90) {
-			finalgrade = "high pass";
+	//E5.12
+	//E5.11
+	std::string input;
+	//char ch;
+	int vowelCnt = 0;
+	int blankCnt = 0;
+	int tabCnt = 0;
+	int newlineCnt = 0;
+	int otherCnt = 0;
+	auto iBeg = input.begin();
+	auto iEnd = input.end();
+	// if ch is a vowel, increment the appropriate counter
+	while(getline(std::cin,input)){
+		for (auto& ch : input) {
+			switch (ch) {
+			case 'a': case 'e': case 'i': case 'o': case 'u': case 'A': case 'E': case 'I': case 'O': case 'U':
+				++vowelCnt;
+				break;
+			case ' ':
+				++blankCnt;
+				break;
+			case '\t':
+				++tabCnt;
+				break;
+			//case '\n':
+				//++newlineCnt;
+				//break;
+			case 'ff': case 'fl': case 'fi':
+			default:
+				++otherCnt;
+				break;
+			}
 		}
-		else if (grade > 75) {
-			finalgrade = "pass";
-		}
-		else if (grade > 59) {
-			finalgrade = "low pass";
-		}
-		else finalgrade = "fail";
-		std::cout << finalgrade << std::endl;
-	}*/
-
-	//E4.23
-	//std::string s = "word";
-	//std::string pl = (((s + (s[s.size() - 1])) == 's') ? "" : "s";
-
-	//E4.25
-	//01110001
-	//~q = 10001110
-	//~'q' << 6 = 1110 0011 1000 0000
-
-	//E4.26
-	// We would only have 16 bits or 16 students
-
-	//E4.27
-	//a. 0011 & 0111 = 0011
-	//b. 0011 | 0111 = 0111
-	//c. 0011 && 0111 = 1
-	//d. 0011 || 0111 = 1
-
-	//E4.28
-	//std::cout << sizeof(bool) << std::endl;
-	//std::cout << sizeof(char) << std::endl;
-	//std::cout << sizeof(int) << std::endl;
-	//std::cout << sizeof(float) << std::endl;
-	//std::cout << sizeof(double) << std::endl;
-
-	//E4.29 help
-	//int x[10];   int* p = x;
-	//std::cout << sizeof(x) / sizeof(*x) << std::endl;
-	//std::cout << sizeof(p) / sizeof(*p) << std::endl;
-
-	//E4.30
-	//a. sizeof(x)+y
-	//b. sizeof(p->(mem[i]))
-	//c. sizeof(a)<b
-	//d. sizeof(f())
-
-	//E4.31 help
-	/*std::vector<int> ivec = {1,2,3,4,5,6,7,9};
-	std::vector<int> ::size_type cnt = ivec.size();
-	for (std::vector<int>::size_type ix = 0; ix != ivec.size(); ix++, cnt--) ivec[ix] = cnt;
-	for (auto& i : ivec) {
-		std::cout << i << " ";
-	}*/
-
-	//E4.34
-	/*a. converts fval to bool
-	b. converts ival to float and the solution of the addtion converts to double
-	c. converts cval to int, then converts result of ival*cval to double*/
-
-	//E4.35
-	/*a. 'a' is converted to a int then the result is converted to the char value
-	b. ival is converted to double, the ui and result are converted dependent on which one is larger then converted to float
-	c. ui or fval is converted to the larger one then the result is converted to double at the end
-	d. ival converted to float, then result converted to double, then result converted to integer than char value*/
-
-	//E4.36
-	//i *= static_cast<int>(d)
-
-	//E4.37
-	//a. pv = static_cast<void>(const_cast<string*>(ps))
-	//b. i = static_cast<int>(*pc)
-	//c. pv = static_cast<void*>(&d)
-	//d. pc = static_cast<char*>(pv)
-
-
-	//E5.3
-	//original while loop
-	int ival = 0, sum = 0;
-	while (ival <= 10) {
-		sum += ival;
-		++ival;
+		++newlineCnt;
+		std::cout << "vowels: " << vowelCnt << " blanks: " << blankCnt << " tabs: " << tabCnt << " newline: " << newlineCnt << " others: " << otherCnt << std::endl;
 	}
-	std::cout << sum << " " << ival << '\n';
-
-	//Modified while loop
-	ival = 0, sum = 0;
-	while (ival <= 10) sum += ival++;
-	std::cout << sum << " " << ival << '\n';
-
-	//Using comma operand
-	
-	for (ival = 0, sum = 0; ival <= 10; sum += ival, ++ival);
-	std::cout << sum << " " << ival << '\n';
-
-
-	//E5.4
-	if (grade > 90) {
-		std::cout << 
-	}
-
-
-
 
 	return 0;
 }
