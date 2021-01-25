@@ -2,4 +2,8 @@
 E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(1,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(2,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(3,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  cppPrimer_FifthEdition.vcxproj -> E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\Debug\cppPrimer_FifthEdition.exe
+E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(4,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(5,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(6,9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+E:\workspace Cpp\cppPractice\cppBook_Practice\cppPrimer_FifthEdition\cppPrimerPractice.cpp(1062,60): error C2039: 'what': is not a member of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\xstring(4648): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'

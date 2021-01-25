@@ -1,8 +1,9 @@
 #include<iostream>;
 #include<string>;
 #include<vector>;
-#include<stdio.h>
-#include <string.h>
+#include<stdio.h>;
+#include<string.h>;
+#include<stdexcept>;
 
 
 //E3.2
@@ -857,44 +858,230 @@
 //	std::cout << "vowels: " << vowelCnt << " blanks: " << blankCnt << " tabs: " << tabCnt << " newline: " << newlineCnt << " others: " << otherCnt << std::endl;
 //}
 
+////E5.12
+//std::string input;
+////char ch;
+//int vowelCnt = 0;
+//int blankCnt = 0;
+//int tabCnt = 0;
+//int newlineCnt = 0;
+//int otherCnt = 0;
+//auto iBeg = input.begin();
+//auto iEnd = input.end();
+//int ff = 0;
+//int fl = 0;
+//int fi = 0;
+//// if ch is a vowel, increment the appropriate counter
+//while(getline(std::cin,input)){
+//	//for (auto& ch : input) {
+//	for (auto beg = input.begin(); beg < input.end()-1; ++beg){
+//		char test = *beg;
+//		char test1 = *(beg+1);
+//		if (test == 'f') {
+//			switch (test1) {
+//			case 'f':
+//				++ff;
+//				break;
+//			case 'l':
+//				++fl;
+//				break;
+//			case 'i':
+//				++fi;
+//				break;
+//			default:
+//				break;
+//			}
+//		}
+//	}
+//	++newlineCnt;
+//	std::cout << "ff: " << ff << " fl: " << fl << " fi: " << fi << std::endl;
+//}
+
+////E5.14
+//std::string input;
+//while (getline(std::cin, input)) {
+//	std::vector<char> test;
+//	auto ibeg = input.begin();
+//	auto iend = input.end();
+//	int count = 0;
+//	int finalCount = 0;
+//	std::vector<char> finalWord = { 'n','o',' ','w','o','r','d' };
+//	for (; ibeg < iend; ++ibeg) {
+//		if (*ibeg == ' ') {
+//			++ibeg;
+//			break;
+//		}
+//		else {
+//			test.push_back(*ibeg);
+//		}
+//	}
+//	while (ibeg!=iend) {
+//		std::vector<char> test1;
+//		for (; ibeg < iend; ++ibeg) {
+//			if (*ibeg == ' ') {
+//				++ibeg;
+//				break;
+//			}
+//			else {
+//				test1.push_back(*ibeg);
+//			}
+//		}
+//		if (test == test1) {
+//			++count;
+//			if (count > finalCount) {
+//				finalWord = test;
+//				finalCount = count;
+//			}
+//		}
+//		else {
+//			count = 0;
+//		}
+//		test = test1;
+//	}
+//	for (auto& i : finalWord) {
+//		std::cout << i;
+//	}
+//	std::cout << std::endl;
+//}
+
+////E5.16
+//for (int i = 0; i < total; ++i) {
+//	...
+//}
+//int i = 0;
+//while (i < total) {
+//	...
+//	++i;
+//}
+//while (!done) {
+	//;
+//}
+//for (; !done;) {
+	//;
+//}
+
+//E5.17
+//std::vector<int> ivec1 = {0,1,2,3,4};
+//std::vector<int> ivec2 = {0,1,2,3};
+//auto beg1 = ivec1.begin();
+//auto beg2 = ivec2.begin();
+//
+//while (*beg1 == *beg2 && beg1 != ivec1.end()-1 && beg2 != ivec2.end()-1) {
+//	++beg1;
+//	++beg2;
+//}
+//if (beg1 == ivec1.end()-1) {
+//	std::cout << "prefix" << std::endl;
+//}
+//else std::cout << "not prefix" << std::endl;
+
+//E5.19
+//std::string string1 = "empty", string2 = "empty";
+//do {
+//	switch (string1.compare(string2)) {
+//	case 1:
+//		std::cout << "string1 is greater than string2." << std::endl;
+//		break;
+//	case 0:
+//		std::cout << "string1 is the same as string2." << std::endl;
+//		break;
+//	case -1:
+//		std::cout << "string1 is less than string2." << std::endl;
+//		break;
+//	default:
+//		std::cout << "ERROR";
+//		break;
+//	}
+//	std::cout << "Give me two strings!" << std::endl;
+//} while (std::cin >> string1 >> string2);
+
+////E5.20
+//std::string input;
+//std::vector<std::string> inputs;
+//while (std::cin >> input) {
+//	inputs.push_back(input);
+//}
+//std::cin.clear();
+//auto inputsBeg = inputs.begin();
+//while (inputsBeg < inputs.end()) {
+//	if (inputs.end() != (inputsBeg+1) && *inputsBeg == *(inputsBeg+1)) {
+//		std::cout << *inputsBeg << std::endl;
+//		break;
+//	}
+//	++inputsBeg;
+//}
+//if (inputsBeg == inputs.end()) {
+//	std::cout << "no word was repeated" << std::endl;
+//}
+
+////E5.21
+//std::string input;
+//std::vector<std::string> inputs;
+//while (std::cin >> input) {
+//	inputs.push_back(input);
+//}
+//std::cin.clear();
+//auto inputsBeg = inputs.begin();
+//while (inputsBeg < inputs.end()) {
+//	if (inputs.end() != (inputsBeg + 1) && *inputsBeg == *(inputsBeg + 1) && isupper((*inputsBeg)[0])) {
+//		std::cout << *inputsBeg << std::endl;
+//		break;
+//	}
+//	++inputsBeg;
+//}
+//if (inputsBeg == inputs.end()) {
+//	std::cout << "no word was repeated" << std::endl;
+//}
+
+//E5.22
+//begin:
+//	int sz = get_size();
+//	if (sz <= 0){
+//		goto begin;
+//}
+//int sz = get_size();
+//while (sz <= 0) {
+//	sz = get_size();
+//}
+
+//E5.23
+//int num1, num2;
+//while (std::cin >> num1 >> num2) {
+//	std::cout << (num1 / num2) << std::endl;
+//}
+
+//E5.24
+//int num1, num2;
+//std::string errormsg = "divide by zero";
+//while (std::cin >> num1 >> num2) {
+//	if (num2 == 0) {
+//		throw std::runtime_error(errormsg);
+//	}
+//	else std::cout << (num1 / num2) << std::endl;
+//}
+
+//E5.25
+//int num1, num2;
+//while (std::cin >> num1 >> num2) {
+//	try {
+//		if (num2 == 0) {
+//			throw num2;
+//		}
+//		else std::cout << (num1 / num2) << std::endl;
+//	}
+//	catch (int myError) {
+//		std::cout << "Divide by zero. Input new numbers." << std::endl;
+//	}
+//}
+
+
 int main() {
 
-	//E5.12
-	//E5.11
-	std::string input;
-	//char ch;
-	int vowelCnt = 0;
-	int blankCnt = 0;
-	int tabCnt = 0;
-	int newlineCnt = 0;
-	int otherCnt = 0;
-	auto iBeg = input.begin();
-	auto iEnd = input.end();
-	// if ch is a vowel, increment the appropriate counter
-	while(getline(std::cin,input)){
-		for (auto& ch : input) {
-			switch (ch) {
-			case 'a': case 'e': case 'i': case 'o': case 'u': case 'A': case 'E': case 'I': case 'O': case 'U':
-				++vowelCnt;
-				break;
-			case ' ':
-				++blankCnt;
-				break;
-			case '\t':
-				++tabCnt;
-				break;
-			//case '\n':
-				//++newlineCnt;
-				//break;
-			case 'ff': case 'fl': case 'fi':
-			default:
-				++otherCnt;
-				break;
-			}
-		}
-		++newlineCnt;
-		std::cout << "vowels: " << vowelCnt << " blanks: " << blankCnt << " tabs: " << tabCnt << " newline: " << newlineCnt << " others: " << otherCnt << std::endl;
-	}
+
+
+	
+
+
 
 	return 0;
 }
