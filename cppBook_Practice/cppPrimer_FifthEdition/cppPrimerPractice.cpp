@@ -1074,11 +1074,44 @@
 //	}
 //}
 
+////E6.3
+//int fact(int num) {
+//	int output = 1;
+//	for (int i = 1; i <= num; ++i) {
+//		output *= i;
+//	}
+//	return output;
+//}
+
+////E6.4
+//void screen(int &number) {
+//	std::cout << "Number please: " << std::endl;
+//	std::cin >> number;
+//	return;
+//}
+////within main function
+//int number;
+//screen(number);
+//std::cout << fact(number) << std::endl;
+
+//E6.5
+void abs(double &number) {
+	if (number < 0) number *= -1;
+	return;
+}
+
+//E6.7
+int counter() {
+	static int number = 0;
+	return number++;
+}
 
 int main() {
-
-
-
+	//int answer;
+	for (int i = 0; i < 10; ++i) {
+		std::cout << counter() << std::endl;
+	}
+	//std::cout << answer;
 	
 
 
