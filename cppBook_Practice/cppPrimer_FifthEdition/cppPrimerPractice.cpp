@@ -4,6 +4,7 @@
 #include<stdio.h>;
 #include<string.h>;
 #include<stdexcept>;
+#include"Chapter6.h";
 
 
 //E3.2
@@ -1075,44 +1076,124 @@
 //}
 
 ////E6.3
-//int fact(int num) {
-//	int output = 1;
-//	for (int i = 1; i <= num; ++i) {
-//		output *= i;
-//	}
-//	return output;
-//}
+int fact(int num) {
+	int output = 1;
+	for (int i = 1; i <= num; ++i) {
+		output *= i;
+	}
+	return output;
+}
 
 ////E6.4
-//void screen(int &number) {
-//	std::cout << "Number please: " << std::endl;
-//	std::cin >> number;
-//	return;
-//}
+void screen(int& number) {
+	std::cout << "Number please: " << std::endl;
+	std::cin >> number;
+	return;
+}
 ////within main function
 //int number;
 //screen(number);
 //std::cout << fact(number) << std::endl;
 
-//E6.5
-void abs(double &number) {
+////E6.5
+void abs(double& number) {
 	if (number < 0) number *= -1;
 	return;
 }
 
-//E6.7
+////E6.7
 int counter() {
 	static int number = 0;
 	return number++;
 }
+////within main function
+//for (int i = 0; i < 10; ++i) {
+//	std::cout << counter() << std::endl;
+//}
+
+//E6.10
+void swapValues(int *input1, int *input2) {
+	int temp;
+	temp = *input1;
+	*input1 = *input2;
+	*input2 = temp;
+	return;
+}
+
+//E6.11
+void reset(std::string &input) {
+	input = "";
+}
+
+//E6.12
+void swapValues2(int& input1, int& input2) {
+	int temp;
+	temp = input1;
+	input1 = input2;
+	input2 = temp;
+	return;
+}
+
+//E6.16
+bool is_empty(const std::string& s) {
+	return s.empty();
+}
+
+//E6.17
+bool anyCap(const std::string &input) {
+	for (auto i : input) {
+		if (isupper(i)) {
+			return true;
+		}
+	}
+	return false;
+}
+void convert2Lower(std::string &input) {
+	for (auto &i : input) {
+		if (isupper(i)) {
+			i = tolower(i);
+		}
+	}
+}
+
+//E6.18
+//a) bool compare(matrix&, matrix&);
+//b) std::vector<int> change_val(int,std::vector<int>);
+
+//E6.19
+//a) illegal: not the right number of arguments
+//b) legal
+//c) legal
+//d) illegal: last argument is not an integer
+
+//E6.21
+int biggerInt(int input1, int* input2) {
+	if (input1 < *input2) {
+		return *input2;
+	}
+	else return input1;
+}
+
+//E6.22
+void swapPInts(int* &input1, int* &input2) {
+	auto temp = input1;
+	input1 = input2;
+	input2 = temp;
+}
+
+//E6.23
+
 
 int main() {
-	//int answer;
-	for (int i = 0; i < 10; ++i) {
-		std::cout << counter() << std::endl;
-	}
-	//std::cout << answer;
-	
+	std::string s = "KeVIn";
+	convert2Lower(s);
+	int i = 987;
+	int k = 123;
+	int* j = &i;
+	int* l = &k;
+	std::cout << *j << " " << *l << std::endl;
+	swapPInts(j, l);
+	std::cout << *j << " " << *l << std::endl;
 
 
 
