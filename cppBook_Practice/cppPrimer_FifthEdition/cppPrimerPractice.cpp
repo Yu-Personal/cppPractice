@@ -1182,20 +1182,48 @@ void swapPInts(int* &input1, int* &input2) {
 }
 
 //E6.23
+void print(const int* ip, const int *end) {
+	if (ip)
+		while (ip != end)
+			std::cout << *ip++;
+}
+void print(const int ip) {
+	std::cout << ip;
+}
 
+////E6.25
+//int main(int argc, char *argv[]) {
+//	if (argc == 3) {
+//		std::string outputString1 = argv[1];
+//		std::string outputString2 = argv[2];
+//		std::string output = outputString1 + outputString2;
+//		std::cout << output << std::endl;
+//	}
+//	else std::cout << "Not the correct number of input parameters" << std::endl;
+//	return 0;
+//}
+
+//E6.26
+//int main(int argc, char* argv[]) {
+//	for (auto i = 1; i < argc; ++i) {
+//		std::cout << "argv[" << i << "]: " << argv[i] << std::endl;
+//	}
+//	return 0;
+//}
+
+//E6.27
+double sumValues(std::initializer_list<double> li) {
+	auto liBeg = li.begin();
+	auto liEnd = li.end();
+	double total = 0.0;
+	for (; liBeg != liEnd; ++liBeg) {
+		total += *liBeg;
+	}
+	return total;
+}
 
 int main() {
-	std::string s = "KeVIn";
-	convert2Lower(s);
-	int i = 987;
-	int k = 123;
-	int* j = &i;
-	int* l = &k;
-	std::cout << *j << " " << *l << std::endl;
-	swapPInts(j, l);
-	std::cout << *j << " " << *l << std::endl;
-
-
-
+	std::initializer_list<int> myList;
+	std::cout << sumValues({ 0, 3.5, 1, -2, 3456.49}) << std::endl;
 	return 0;
 }
