@@ -1211,19 +1211,74 @@ void print(const int ip) {
 //	return 0;
 //}
 
-//E6.27
-double sumValues(std::initializer_list<double> li) {
-	auto liBeg = li.begin();
-	auto liEnd = li.end();
-	double total = 0.0;
-	for (; liBeg != liEnd; ++liBeg) {
-		total += *liBeg;
-	}
-	return total;
+////E6.27
+//double sumValues(std::initializer_list<double> li) {
+//	auto liBeg = li.begin();
+//	auto liEnd = li.end();
+//	double total = 0.0;
+//	for (; liBeg != liEnd; ++liBeg) {
+//		total += *liBeg;
+//	}
+//	return total;
+//}
+
+////E6.30
+//// incorrect return values, this code will not compile
+//bool str_subrange(const std::string& str1, const std::string& str2)
+//{
+//	// same sizes: return normal equality test
+//	if (str1.size() == str2.size())
+//		return str1 == str2;   // ok: == returns bool
+//	// find the size of the smaller string; conditional operator, see § 4.7 (p. 151)
+//	auto size = (str1.size() < str2.size())
+//		? str1.size() : str2.size();
+//	// look at each element up to the size of the smaller string
+//	for (decltype(size) i = 0; i != size; ++i) {
+//		if (str1[i] != str2[i])
+//			return str1 == str2; // error #1: no return value; compiler should detect this error
+//	}
+//	// error #2: control might flow off the end of the function without a return
+//	// the compiler might not detect this error
+//}
+
+//E6.33
+//void print(std::vector<int> input, int index, int sizeOfInput) {
+//	if (index != sizeOfInput) {
+//		std::cout << input[index] << " ";
+//		print(input, ++index, sizeOfInput);
+//	}
+//	return;
+//}
+
+////E6.36
+//std::string(*func(int i))[10];
+
+////E6.37
+////type alias
+//std::string array[10];
+//std::string* p1[10];
+//std::string(*p2)[10] = &array;
+////trailing return
+//auto func(int i)->std::string(*)[10];
+////decltype
+//std::string array[10];
+//decltype(array)* func(int i);
+
+//E6.38
+int odd[] = { 1,3,5,7,9 };
+int even[] = { 0,2,4,6,8 };
+decltype(odd)& arrPtr(int i)
+{
+	return (i % 2) ? odd : even; // returns a pointer to the array
 }
 
+
+
+
 int main() {
-	std::initializer_list<int> myList;
-	std::cout << sumValues({ 0, 3.5, 1, -2, 3456.49}) << std::endl;
+
+
+
+
 	return 0;
 }
