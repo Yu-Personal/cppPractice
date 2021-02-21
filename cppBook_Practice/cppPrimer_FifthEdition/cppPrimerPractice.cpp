@@ -5,7 +5,9 @@
 #include<string.h>;
 #include<stdexcept>;
 #include"Chapter6.h";
+#include <cassert>
 
+#define NDEBUG 
 
 //E3.2
 //std::string line;
@@ -1075,86 +1077,86 @@
 //	}
 //}
 
-////E6.3
-int fact(int num) {
-	int output = 1;
-	for (int i = 1; i <= num; ++i) {
-		output *= i;
-	}
-	return output;
-}
-
-////E6.4
-void screen(int& number) {
-	std::cout << "Number please: " << std::endl;
-	std::cin >> number;
-	return;
-}
-////within main function
-//int number;
-//screen(number);
-//std::cout << fact(number) << std::endl;
-
-////E6.5
-void abs(double& number) {
-	if (number < 0) number *= -1;
-	return;
-}
-
-////E6.7
-int counter() {
-	static int number = 0;
-	return number++;
-}
-////within main function
-//for (int i = 0; i < 10; ++i) {
-//	std::cout << counter() << std::endl;
+//////E6.3
+//int fact(int num) {
+//	int output = 1;
+//	for (int i = 1; i <= num; ++i) {
+//		output *= i;
+//	}
+//	return output;
 //}
-
-//E6.10
-void swapValues(int *input1, int *input2) {
-	int temp;
-	temp = *input1;
-	*input1 = *input2;
-	*input2 = temp;
-	return;
-}
-
-//E6.11
-void reset(std::string &input) {
-	input = "";
-}
-
-//E6.12
-void swapValues2(int& input1, int& input2) {
-	int temp;
-	temp = input1;
-	input1 = input2;
-	input2 = temp;
-	return;
-}
-
-//E6.16
-bool is_empty(const std::string& s) {
-	return s.empty();
-}
-
-//E6.17
-bool anyCap(const std::string &input) {
-	for (auto i : input) {
-		if (isupper(i)) {
-			return true;
-		}
-	}
-	return false;
-}
-void convert2Lower(std::string &input) {
-	for (auto &i : input) {
-		if (isupper(i)) {
-			i = tolower(i);
-		}
-	}
-}
+//
+//////E6.4
+//void screen(int& number) {
+//	std::cout << "Number please: " << std::endl;
+//	std::cin >> number;
+//	return;
+//}
+//////within main function
+////int number;
+////screen(number);
+////std::cout << fact(number) << std::endl;
+//
+//////E6.5
+//void abs(double& number) {
+//	if (number < 0) number *= -1;
+//	return;
+//}
+//
+//////E6.7
+//int counter() {
+//	static int number = 0;
+//	return number++;
+//}
+//////within main function
+////for (int i = 0; i < 10; ++i) {
+////	std::cout << counter() << std::endl;
+////}
+//
+////E6.10
+//void swapValues(int *input1, int *input2) {
+//	int temp;
+//	temp = *input1;
+//	*input1 = *input2;
+//	*input2 = temp;
+//	return;
+//}
+//
+////E6.11
+//void reset(std::string &input) {
+//	input = "";
+//}
+//
+////E6.12
+//void swapValues2(int& input1, int& input2) {
+//	int temp;
+//	temp = input1;
+//	input1 = input2;
+//	input2 = temp;
+//	return;
+//}
+//
+////E6.16
+//bool is_empty(const std::string& s) {
+//	return s.empty();
+//}
+//
+////E6.17
+//bool anyCap(const std::string &input) {
+//	for (auto i : input) {
+//		if (isupper(i)) {
+//			return true;
+//		}
+//	}
+//	return false;
+//}
+//void convert2Lower(std::string &input) {
+//	for (auto &i : input) {
+//		if (isupper(i)) {
+//			i = tolower(i);
+//		}
+//	}
+//}
 
 //E6.18
 //a) bool compare(matrix&, matrix&);
@@ -1166,30 +1168,30 @@ void convert2Lower(std::string &input) {
 //c) legal
 //d) illegal: last argument is not an integer
 
-//E6.21
-int biggerInt(int input1, int* input2) {
-	if (input1 < *input2) {
-		return *input2;
-	}
-	else return input1;
-}
-
-//E6.22
-void swapPInts(int* &input1, int* &input2) {
-	auto temp = input1;
-	input1 = input2;
-	input2 = temp;
-}
-
-//E6.23
-void print(const int* ip, const int *end) {
-	if (ip)
-		while (ip != end)
-			std::cout << *ip++;
-}
-void print(const int ip) {
-	std::cout << ip;
-}
+////E6.21
+//int biggerInt(int input1, int* input2) {
+//	if (input1 < *input2) {
+//		return *input2;
+//	}
+//	else return input1;
+//}
+//
+////E6.22
+//void swapPInts(int* &input1, int* &input2) {
+//	auto temp = input1;
+//	input1 = input2;
+//	input2 = temp;
+//}
+//
+////E6.23
+//void print(const int* ip, const int *end) {
+//	if (ip)
+//		while (ip != end)
+//			std::cout << *ip++;
+//}
+//void print(const int ip) {
+//	std::cout << ip;
+//}
 
 ////E6.25
 //int main(int argc, char *argv[]) {
@@ -1264,21 +1266,231 @@ void print(const int ip) {
 //std::string array[10];
 //decltype(array)* func(int i);
 
-//E6.38
-int odd[] = { 1,3,5,7,9 };
-int even[] = { 0,2,4,6,8 };
-decltype(odd)& arrPtr(int i)
-{
-	return (i % 2) ? odd : even; // returns a pointer to the array
-}
+////E6.38
+//int odd[] = { 1,3,5,7,9 };
+//int even[] = { 0,2,4,6,8 };
+//inline decltype(odd)& arrPtr(int i)
+//{
+//	return (i % 2) ? odd : even; // returns a pointer to the array
+//}
+
+////E6.42
+//std::string make_plural(size_t ctr, const std::string& word, const std::string& ending = "s")
+//{
+//	return (ctr > 1) ? word + ending : word;
+//}
+
+////E6.44
+////Exercise 6.44: Rewrite the isShorter function from § 6.2.2 (p. 211) to be inline.
+//inline bool isShorter(const std::string& s1, const std::string& s2)
+//{
+//	return s1.size() < s2.size();
+//}
+
+////E6.46
+//constexpr bool isShorter(const std::string& s1, const std::string& s2) {
+//	return s1.size() < s2.size() ? true : false;
+//}
+
+////E6.47
+//void print(std::vector<int> input, int index) {
+//	if (index != input.size()) {
+//		#ifndef NDEBUG
+//				assert(std::cout << "index number: " << index << ", ");
+//
+//		#endif // !NDEBUG
+//		std::cout << input[index] << "\n";
+//		print(input, index + 1);
+//	}
+//	else return;
+//	return;
+//}
+
+////E6.51
+//void f() {
+//	std::cout << "first";
+//}
+//void f(int) {
+//	std::cout << "second";
+//}
+//void f(int, int) {
+//	std::cout << "third";
+//}
+//void f(double, double = 3.14) {
+//	std::cout << "fourth";
+//}
+
+//E7.1
+//struct Sales_data {
+//    std::string bookNo;
+//    unsigned units_sold = 0;
+//    double revenue = 0.0;
+//};
+//int main()
+//{
+//    Sales_data total; // variable to hold data for the next transaction
+//    // read the first transaction and ensure that there are data to process
+//    std::cout << "Enter first book" << std::endl;
+//    std::cin >> total.bookNo;
+//    std::cin >> total.units_sold;
+//    std::cin >> total.revenue;
+//    Sales_data trans; // variable to hold the running sum
+//    // read and process the remaining transactions
+//    while (trans.bookNo != "end") {
+//        std::cout << "Enter book" << std::endl;
+//        std::cin >> trans.bookNo;
+//        std::cin >> trans.units_sold;
+//        std::cin >> trans.revenue;
+//        // if we're still processing the same book
+//        if (total.bookNo == trans.bookNo){
+//            total.units_sold += trans.units_sold; // update the running total
+//            total.revenue += trans.revenue;
+//        }
+//        else {
+//            // print results for the previous book
+//            std::cout << total.bookNo << ", " << total.units_sold << ", " << total.revenue << std::endl;
+//            total = trans;  // total now refers to the next book
+//        }
+//    }
+//    std::cout << total.bookNo << ", " << total.units_sold << ", " << total.revenue << std::endl; // print the last transaction
+//    return 0;
+//}
+
+////E7.3
+//struct Sales_data {
+//	std::string isbn() const { return bookNo; }
+//	Sales_data& combine(const Sales_data&);
+//	double avg_price() const;
+//
+//	std::string bookNo;
+//	unsigned units_sold = 0;
+//	double revenue = 0.0;
+//
+//};
+//Sales_data& Sales_data::combine(const Sales_data& input) {
+//	units_sold += input.units_sold;
+//	revenue += input.revenue;
+//    return *this;
+//}
+//int main()
+//{
+//    Sales_data total; // variable to hold data for the next transaction
+//    // read the first transaction and ensure that there are data to process
+//    std::cout << "Enter first book" << std::endl;
+//    std::cin >> total.bookNo;
+//    std::cin >> total.units_sold;
+//    std::cin >> total.revenue;
+//    Sales_data trans; // variable to hold the running sum
+//    // read and process the remaining transactions
+//    while (trans.bookNo != "end") {
+//        std::cout << "Enter book" << std::endl;
+//        std::cin >> trans.bookNo;
+//        std::cin >> trans.units_sold;
+//        std::cin >> trans.revenue;
+//        // if we're still processing the same book
+//        if (total.bookNo == trans.bookNo) {
+//            total.combine(trans);
+//        }
+//        else {
+//            // print results for the previous book
+//            std::cout << total.isbn() << ", " << total.units_sold << ", " << total.revenue << std::endl;
+//            total = trans;  // total now refers to the next book
+//        }
+//    }
+//    std::cout << total.isbn() << ", " << total.units_sold << ", " << total.revenue << std::endl; // print the last transaction
+//    return 0;
+//}
 
 
+//E7.4 //E7.5
+//struct Person {
+//	std::string owner() const { return name; }
+//	std::string location() const { return address; }
+//	//Person& add(const Person&);
+//	//Person& read(const Person&);
+//	//void print();
+//
+//	std::string name;
+//	std::string address;
+//};
 
+//E7.6 //E7.7
+//struct Sales_data {
+//	std::string isbn() const { return bookNo; }
+//	Sales_data& combine(const Sales_data&);
+//	double avg_price() const;
+//	Sales_data& add(const Sales_data&);
+//	Sales_data& read(std::string, unsigned, double);
+//	void print();
+//
+//	std::string bookNo;
+//	unsigned units_sold = 0;
+//	double revenue = 0.0;
+//};
+//Sales_data& Sales_data::combine(const Sales_data& input) {
+//	units_sold += input.units_sold;
+//	revenue += input.revenue;
+//    return *this;
+//}
+//Sales_data& Sales_data::add(const Sales_data& input) {
+//	this->combine(input);
+//	return *this;
+//}
+//Sales_data& Sales_data::read(std::string name, unsigned units, double cost) {
+//	this->bookNo = name;
+//	this->units_sold = units;
+//	this->revenue = cost;
+//	return *this;
+//}
+//void Sales_data::print() {
+//	std::cout << "bookNo: " << bookNo
+//		<< ", units sold: " << units_sold
+//		<< ", revenue: " << revenue
+//		<< std::endl;
+//}
+//int main()
+//{
+//    Sales_data total; // variable to hold data for the next transaction
+//    // read the first transaction and ensure that there are data to process
+//    std::cout << "Enter first book" << std::endl;
+//	std::string name;
+//	unsigned units;
+//	double cost;
+//	std::cin >> name >> units >> cost;
+//	total.read(name, units, cost);
+//    Sales_data trans; // variable to hold the running sum
+//    // read and process the remaining transactions
+//    while (trans.bookNo != "end") {
+//        std::cout << "Enter book" << std::endl;
+//        std::cin >> name;
+//        std::cin >> units;
+//        std::cin >> cost;
+//		trans.read(name, units, cost);
+//        // if we're still processing the same book
+//        if (total.bookNo == trans.bookNo) {
+//            total.add(trans);
+//        }
+//        else {
+//            // print results for the previous book
+//			total.print();
+//            total = trans;  // total now refers to the next book
+//        }
+//    }
+//	total.print();
+//    return 0;
+//}
 
-int main() {
+//E7.9
+struct Person {
+	std::string owner() const { return name; }
+	std::string location() const { return address; }
+	//Person& add(const Person&);
+	std::istream& read(std::istream& is, Person& item);
+	void print();
 
+	std::string name;
+	std::string address;
+};
+std::istream& read(std::istream& is, Person& item) {
 
-
-
-	return 0;
 }
